@@ -36,12 +36,6 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to root_path, notice: "Account has been deleted."
   end
-
-  def add_cash
-    @card.balance = @card.balance + 1
-    @card.save
-    render nothing: true
-  end
   
   private
   def set_user

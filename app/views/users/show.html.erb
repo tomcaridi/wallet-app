@@ -16,15 +16,7 @@
   </div>
     <div class="balance-edit">Balance: <%= card.balance %></div>
     <div class="balance-edit"><%= link_to 'Edit Card', edit_card_path(card.id) %></div>
+
 </div>
 
   <% end %>
-
-<!--   <%= link_to "Add Cash!", add_cash_path(user_id: @user.id), method: :get, remote: true, class: "add_cash" %> 
-
-<script type="text/javascript">
-  $(".add_cash").on("ajax:complete", function(e) {
-  	console.log();
-  	$("body").append("<p>" + data.responseText + "</p>");
-  });
-</script> -->

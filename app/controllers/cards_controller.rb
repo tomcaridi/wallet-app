@@ -18,7 +18,7 @@ class CardsController < ApplicationController
   	else 
   	  flash[:alert] = "There was an issue"
   	end
-    redirect_to user_path(id)    
+    redirect_to new_card_path 
   end
 
   def edit
@@ -31,6 +31,11 @@ class CardsController < ApplicationController
   end
 
   def show
+  end
+
+  def share
+    @share = CardUser.create(user_id: session[:user_id], card_id: @card.id)
+    flash[:notice] = "Card shared"
   end
 
   def destroy
