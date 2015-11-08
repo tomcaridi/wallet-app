@@ -1,0 +1,30 @@
+<%= link_to 'Edit Profile', edit_user_path %>
+
+<%= link_to 'Add new card', new_card_path %>
+
+<h3>My Balance</h3>
+
+
+<h3>My Cards</h3>
+<% @cards.each do |card| %>
+<div class="card-wrapper">
+  <div class="card-bx">
+    <div class="card-info"><%= card.card_number %></div>
+    <div class="card-info"><%= card.exp_month %></div>
+    <div class="card-info"><%= card.exp_year %></div>
+    <div class="card-type"><%= card.card_type %></div>
+  </div>
+    <div class="balance-edit">Balance: <%= card.balance %></div>
+    <div class="balance-edit"><%= link_to 'Edit Card', edit_card_path(card.id) %></div>
+</div>
+
+  <% end %>
+
+<!--   <%= link_to "Add Cash!", add_cash_path(user_id: @user.id), method: :get, remote: true, class: "add_cash" %> 
+
+<script type="text/javascript">
+  $(".add_cash").on("ajax:complete", function(e) {
+  	console.log();
+  	$("body").append("<p>" + data.responseText + "</p>");
+  });
+</script> -->

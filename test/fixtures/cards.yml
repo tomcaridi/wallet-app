@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  type: 
+  exp_month: 1
+  exp_year: 1
+  balance: 9.99
+
+two:
+  number: 1
+  type: 
+  exp_month: 1
+  exp_year: 1
+  balance: 9.99

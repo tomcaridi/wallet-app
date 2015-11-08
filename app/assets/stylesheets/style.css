@@ -1,0 +1,13 @@
+.card-wrapper {
+	width: 300px;
+	height:200px;
+	float:left;
+	margin-right: 20px;
+}
+
+.card-bx {
+	width: 300px;
+	height: 150px;
+	background-color: #d3d1d1;
+	border-radius: 5px;
+}

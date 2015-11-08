@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WalletApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if flash[:notice] %>
+    <%=flash[:notice] %>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <%=flash[:alert] %>
+  <% end %>
+
+  <% if session[:user_id] %>
+    <%= link_to "Sign Out", users_sign_out_path %>
+  <% end %>
+  
+<script type="text/javascript">
+
+$(document).on("page:fetch", function() {
+  console.log("fetch called");
+});
+
+$(document).on("page:receive", function() {
+  console.log("received");
+});
+
+</script>
+
+<%= yield %>
+
+</body>
+</html>

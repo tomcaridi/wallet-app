@@ -1,0 +1,16 @@
+<%= form_for @card do |f| %>
+  <% if @card.errors.any? %>
+    <% @card.errors.full_messages.each do |error| %>
+      <p><%= error %></p>
+      <% end %>
+  <% end %>
+	<div class="f-label"><%=f.label :card_number %></div>
+	<div class="f-field"><%=f.text_field :card_number %></div>
+  <div class="f-label"><%=f.label :exp_month %></div>
+  <div class="f-field"><%=f.text_field :exp_month %></div>
+  <div class="f-label"><%=f.label :exp_year %></div>
+  <div class="f-field"><%=f.text_field :exp_year %></div>
+  <div class="f-label"><%=f.label :balance %></div>
+  <div class="f-field"><%=f.text_field :balance %></div>
+  <%=f.submit%></div>
+<% end %>
