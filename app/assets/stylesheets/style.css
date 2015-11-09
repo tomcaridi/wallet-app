@@ -11,3 +11,12 @@
 	background-color: #d3d1d1;
 	border-radius: 5px;
 }
+
+.balance {
+	float: left;
+}
+
+.edit-share {
+	float: right;
+	margin-left: 5px;
+}

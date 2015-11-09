@@ -2,8 +2,6 @@
 
   <%= link_to 'Edit Profile', edit_user_path %>
 
-  <%= link_to 'Add new card', new_card_path %>
-
   <h3>My Balance</h3>
 
 
@@ -16,13 +14,16 @@
       <div class="card-info"><%= card.exp_year %></div>
       <div class="card-type"><%= card.card_type %></div>
     </div>
-      <div class="balance-edit">Balance: <%= card.balance %></div>
-      <div class="balance-edit"><%= link_to 'Edit Card', edit_card_path(card.id) %></div>
-      <div class="balance-edit"><%= link_to 'Share Card', share_new_path %></div>
-
+      <div class="balance">Balance: <%= card.balance %></div>
+      <div class="edit-share"><%= link_to 'Edit', edit_card_path(card.id) %></div>
+      <div class="edit-share"><%= link_to 'Share', carduser_path %></div>
   </div>
-
   <% end %>
+    <div class="card-wrapper">
+    <div class="card-bx">
+      <div class="addcard-text"><%= link_to 'Add new card', new_card_path %></div>
+    </div>
+  </div>
 <% else %>
 <%= flash[:alert] = "You must be logged in." %>
 <%= link_to 'Back', root_path %>

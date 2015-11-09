@@ -8,19 +8,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if flash[:notice] %>
-    <%=flash[:notice] %>
-  <% end %>
 
-  <% if flash[:alert] %>
-    <%=flash[:alert] %>
-  <% end %>
+<% if flash[:notice] %>
+  <%=flash[:notice] %>
+<% end %>
 
-  <% if session[:user_id] %>
-    <%= link_to "Sign Out", users_sign_out_path %>
-  <% end %>
+<% if flash[:alert] %>
+  <%=flash[:alert] %>
+<% end %>
+
+<% unless session[:user_id] %>
+  <%= link_to "Sign Up", sign_up_path %>
+  <%= link_to "Sign In", sign_in_path %>
+<% end %>
   
-  <%= yield %>
+<% if session[:user_id] %>
+  <%= link_to "Sign Out", users_sign_out_path %>
+<% end %>
+  
+<%= yield %>
 
 </body>
 </html>

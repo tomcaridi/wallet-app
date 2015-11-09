@@ -10,7 +10,7 @@ class CardsController < ApplicationController
   end
 
   def create
-    id = session[:user_id]
+    @user = session[:user_id]
   	@card = Card.new(card_params)
   	if @card.save
       CardUser.create(user_id: session[:user_id], card_id: @card.id)
@@ -18,16 +18,16 @@ class CardsController < ApplicationController
   	else 
   	  flash[:alert] = "There was an issue"
   	end
-    redirect_to new_card_path 
+    redirect_to user_path(@user)
   end
 
   def edit
   end
 
   def update
-    id = session[:user_id]
+    @user = session[:user_id]
     @card.update(card_params)
-    redirect_to edit_card_path, notice: "Sucessfully updated card."
+    redirect_to user_path(@user), notice: "Sucessfully updated card."
   end
 
   def show
@@ -35,6 +35,7 @@ class CardsController < ApplicationController
 
   def destroy
     @card.destroy
+    @user = session[:user_id]
     redirect_to user_path(@user)
   end
   
