@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/sign_in" => "sessions#new"
   post "/sign_in" => "sessions#create"
   get "/users/sign_out" => "sessions#destroy"
+  get "/share/new" => "cardusers#share"
+  post "/share/new" => "cardusers#share"
 
   resources :users 
   resources :cards

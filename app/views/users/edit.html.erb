@@ -1,4 +1,10 @@
-<h1>Edit profile</h1>
-  <%= render 'form' %>
+<% if session[:user_id] == @user.id %>
 
-<%= link_to 'Delete Account', @user, method: :delete, data: {confirm: "Are you sure?"} %>
+  <h1>Edit profile</h1>
+    <%= render 'form' %>
+
+  <%= link_to 'Delete Account', @user, method: :delete, data: {confirm: "Are you sure?"} %>
+<% else %>
+<%= flash[:alert] = "You must be logged in" %>
+<%= link_to 'Back', root_path %>
+<% end %>

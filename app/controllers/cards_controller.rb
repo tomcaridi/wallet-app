@@ -33,11 +33,6 @@ class CardsController < ApplicationController
   def show
   end
 
-  def share
-    @share = CardUser.create(user_id: session[:user_id], card_id: @card.id)
-    flash[:notice] = "Card shared"
-  end
-
   def destroy
     @card.destroy
     redirect_to user_path(@user)

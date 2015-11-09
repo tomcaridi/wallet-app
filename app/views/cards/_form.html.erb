@@ -7,9 +7,9 @@
 	<div class="f-label"><%=f.label :card_number %></div>
 	<div class="f-field"><%=f.text_field :card_number %></div>
   <div class="f-label"><%=f.label :exp_month %></div>
-  <div class="f-field"><%=f.text_field :exp_month %></div>
+  <div class="f-field"><%=f.select :exp_month, (1..12) %></div>
   <div class="f-label"><%=f.label :exp_year %></div>
-  <div class="f-field"><%=f.text_field :exp_year %></div>
+  <div class="f-field"><%=f.select :exp_year, (2015..2025) %></div>
   <div class="f-label"><%=f.label :balance %></div>
   <div class="f-field"><%=f.text_field :balance %></div>
   <%=f.submit%>

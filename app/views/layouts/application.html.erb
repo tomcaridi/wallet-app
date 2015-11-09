@@ -20,19 +20,7 @@
     <%= link_to "Sign Out", users_sign_out_path %>
   <% end %>
   
-<script type="text/javascript">
-
-$(document).on("page:fetch", function() {
-  console.log("fetch called");
-});
-
-$(document).on("page:receive", function() {
-  console.log("received");
-});
-
-</script>
-
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
