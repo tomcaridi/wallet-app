@@ -1,5 +1,7 @@
-<h1>Edit card</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Delete Card', @card, method: :delete, data: {confirm: "Are you sure?"} %>
+<div class="container">
+  <div class="signup-bx">
+  <h1>Edit card</h1>
+  <%= render 'form' %>
+  <div class="delete"><%= link_to 'Delete Card', @card, method: :delete, data: {confirm: "Are you sure?"} %></div>
+  </div>
+</div>

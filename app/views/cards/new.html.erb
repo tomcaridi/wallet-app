@@ -1,10 +1,11 @@
-<% if session[:user_id] %>
-
-  <h1>Add a new card</h1>
-
-  <%= render 'form' %>
-  
-<% else %>
-<%= flash[:alert] = "You must be logged in." %>
-<%= link_to 'Back', root_path %>
-<% end %>
+<div class="container">
+  <div class="signup-bx">
+    <% if session[:user_id] %>
+    <h1>Add a new card</h1>
+    <%= render 'form' %>
+    <% else %>
+    <%= flash[:alert] = "You must be logged in." %>
+    <%= link_to 'Back', root_path %>
+    <% end %>
+  </div>
+</div>
