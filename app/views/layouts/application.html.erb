@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WalletApp</title>
+  <title>WalletPal</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="nav">
+  <div class="logo"><a href="/">WalletPal</a></div>
+  <ul>
+    <% if session[:user_id] %>
+    <li><%= link_to "Sign Out", users_sign_out_path %></li>
+    <% else %>
+    <li><%= link_to "Sign Up", sign_up_path %></li>
+    <li><%= link_to "Sign In", sign_in_path %></li>
+    <% end %>
+  </ul>
+</div>
 
 <% if flash[:notice] %>
   <%=flash[:notice] %>
@@ -15,15 +26,6 @@
 
 <% if flash[:alert] %>
   <%=flash[:alert] %>
-<% end %>
-
-<% unless session[:user_id] %>
-  <%= link_to "Sign Up", sign_up_path %>
-  <%= link_to "Sign In", sign_in_path %>
-<% end %>
-  
-<% if session[:user_id] %>
-  <%= link_to "Sign Out", users_sign_out_path %>
 <% end %>
   
 <%= yield %>

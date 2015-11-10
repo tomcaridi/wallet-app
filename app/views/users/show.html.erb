@@ -1,30 +1,29 @@
-<% if session[:user_id] == @user.id %>
+<div class="container">
 
+  <% if session[:user_id] == @user.id %>
   <%= link_to 'Edit Profile', edit_user_path %>
-
-  <h3>My Balance</h3>
-
-
-  <h3>My Cards</h3>
-  <% @cards.each do |card| %>
-  <div class="card-wrapper">
-    <div class="card-bx">
-      <div class="card-info"><%= card.card_number %></div>
-      <div class="card-info"><%= card.exp_month %></div>
-      <div class="card-info"><%= card.exp_year %></div>
-      <div class="card-type"><%= card.card_type %></div>
-    </div>
-      <div class="balance">Balance: <%= card.balance %></div>
-      <div class="edit-share"><%= link_to 'Edit', edit_card_path(card.id) %></div>
-      <div class="edit-share"><%= link_to 'Share', carduser_path %></div>
-  </div>
-  <% end %>
+  <div class="cards-container">
+    <h3>My Cards</h3>
+    <% @cards.each do |card| %>
     <div class="card-wrapper">
-    <div class="card-bx">
-      <div class="addcard-text"><%= link_to 'Add new card', new_card_path %></div>
+      <div class="card-bx">
+        <div class="card-num"><%= card.card_number %></div>
+        <div class="card-month"><%= card.exp_month %></div>
+        <div class="card-year"><%= card.exp_year %></div>
+        <div class="card-type"><%= card.card_type %></div>
+      </div>
+        <div class="balance">Balance: <%= card.balance %></div>
+        <div class="edit-share"><%= link_to 'Edit', edit_card_path(card.id) %></div>
+        <div class="edit-share"><%= link_to 'Share', carduser_path %></div>
     </div>
-  </div>
-<% else %>
-<%= flash[:alert] = "You must be logged in." %>
-<%= link_to 'Back', root_path %>
-<% end %>
+    <% end %>
+      <div class="card-wrapper">
+        <div class="card-bx">
+          <div class="addcard-text"><%= link_to 'Add new card', new_card_path %></div>
+        </div>
+      </div>
+  <% else %>
+  <%= flash[:alert] = "You must be logged in." %>
+  <%= link_to 'Back', root_path %>
+  <% end %>
+</div>
