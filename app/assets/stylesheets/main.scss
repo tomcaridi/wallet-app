@@ -3,7 +3,7 @@
 	color: #0E3C8E;
 	font-family: 'Tahoma';
 	font-size: 1.5em;
-	margin-top: 3px;
+	margin-top: 9px;
 	margin-left: 3px;
 
 	a:link, a:visited {
@@ -13,9 +13,10 @@
 
 .nav {
 	width: 101%;
-	height: 40px;
+	height: 50px;
 	margin: 0 auto;
 	margin-top: -8px;
+	border-bottom: 2px solid #cbd2d6;
 
 	ul {
 	list-style: none;
@@ -27,7 +28,7 @@
 	float: left;
 	vertical-align: middle;
 	margin-right: 20px;
-	margin-top: -6px;
+	margin-top: -3px;
 	}
 
 	a:link, a:visited {

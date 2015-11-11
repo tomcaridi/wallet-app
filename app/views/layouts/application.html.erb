@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="nav">
-  <div class="logo"><a href="/">WalletPal</a></div>
+  <div class="logo"><a href="/">Wallet<span>Pal</span></a></div>
   <ul>
     <% if session[:user_id] %>
     <li><%= link_to "Sign Out", users_sign_out_path %></li>
@@ -21,11 +21,11 @@
 </div>
 
 <% if flash[:notice] %>
-  <%=flash[:notice] %>
+  <div class="notice"><%=flash[:notice] %></div>
 <% end %>
 
 <% if flash[:alert] %>
-  <%=flash[:alert] %>
+  <div class="alert"><%=flash[:alert] %></div>
 <% end %>
 
 <%= yield %>

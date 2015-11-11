@@ -10,7 +10,7 @@
         <div class="card-exp"><%= card.exp_month %> / <%= card.exp_year %></div>
         <div class="card-type"><%= card.card_type %></div>
       </div>
-        <div class="balance">Balance: <%= card.balance %></div>
+        <div class="balance">Balance: $<%= card.balance %>0</div>
         <div class="edit-share"><%= link_to 'Edit', edit_card_path(card.id) %></div>
        <div class="edit-share"><%= link_to 'Share', carduser_path %></div>
     </div>
