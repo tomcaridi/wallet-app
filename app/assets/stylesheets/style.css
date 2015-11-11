@@ -1,5 +1,8 @@
 html {
 	font-family: 'Tahoma';
+}
+
+.user-background {
 	background-color: #f7f9fa;
 }
 
@@ -72,6 +75,7 @@ span {
 h1 {
 	color: #0E3C8E;
 	text-align: center;
+	margin-top: 50px;
 }
 
 h3 {
@@ -101,20 +105,12 @@ h3 {
 	font-size: 0.8em;
 }
 
-.edit-profile a:link, a:visited {
-	text-decoration: none;
-	color: navy;
-}
 .card-bx {
 	width: 300px;
 	height: 150px;
 	background-color: #7f7f7f;
 	background-image: -webkit-linear-gradient(135deg, #555555, #898989 50%, #555555);
 	border-radius: 5px;
-}
-
-.newcard {
-	display: inline-block;
 }
 
 .card-num {
