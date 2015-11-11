@@ -1,13 +1,17 @@
+/**{
+	border: 1px solid black;
+}
+*/
 html {
 	font-family: 'Tahoma';
 }
 
-.container {
+/*.container {
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
 }
-
+*/
 .cover {
 	width: 99%;
 	height: 100%;
@@ -36,43 +40,6 @@ html {
 	font-size: 3em;
 }
 
-.logo {
-	float: left;
-	color: #0E3C8E;
-	font-family: 'Tahoma';
-	font-size: 1.5em;
-	margin-top: 3px;
-	margin-left: 3px;
-}
-
-.logo a:link, a:visited {
-	text-decoration: none;
-}
-
-.nav {
-	width: 101%;
-	height: 40px;
-	margin: 0 auto;
-	margin-top: -8px;
-}
-
-.nav ul {
-	list-style: none;
-	float: right;
-}
-
-.nav ul li {
-	font-size: 1em;
-	float: left;
-	vertical-align: middle;
-	margin-right: 20px;
-	margin-top: -6px;
-}
-
-.nav ul li a:link, a:visited {
-	text-decoration: none;
-	color: #0E3C8E;;
-}
 
 .login-bx {
 	position: relative;
@@ -104,14 +71,23 @@ h1 {
 }
 
 .cards-container {
-	width: 80%;
+	width: 75%;
 	margin: 0 auto;
+	/*text-align: left;*/
 }
+
+.cardlist-wrapper {
+	max-width:99%;
+	border: 1px solid green;
+	display: inline-block;
+}
+
 .card-wrapper {
 	width: 300px;
 	height:200px;
-	float:left;
-	margin-right: 20px;
+	float: left;
+	margin-left: 7px;
+	margin-right: 5px;
 	font-size: 0.8em;
 }
 
@@ -124,6 +100,10 @@ h1 {
 	background-color: #d3d1d1;
 	border-radius: 5px;
 }
+
+.newcard {
+	display: inline-block;
+}
 .card-num {
 	letter-spacing: 10px;
 	position: relative;
@@ -133,35 +113,21 @@ h1 {
 
 .card-exp {
 	text-align: right;
-	margin-right: 24px;
+	margin-right: 10px;
 	position: relative;
 	top: 45%;
 }
 
 .card-type {
 	text-align: right;
-	margin-right: 24px;
+	margin-right: 10px;
 	position: relative;
 	top: 55%;
 }
-.addcard-text {
-	font-size: 1.5em;
-	position: relative;
-	top: 40%;
-	text-align: center;
-}
 
-.addcard-text a:link, a:visited {
-	text-decoration: none;
-}
 
 .balance {
 	float: left;
-}
-
-.edit-share {
-	float: right;
-	margin-left: 5px;
 }
 
 .delete {
@@ -173,3 +139,95 @@ h1 {
 .delete-account a:link, a:visited {
 	text-decoration: none;
 }
+
+@media all and (max-width: 740px) {
+/*	.container {
+		width: 100%;
+		margin: 0 auto;
+	}*/
+
+	.cards-container {
+		width: 100%;
+		margin: 0 auto;
+		border: 1px solid red;
+	}
+
+	.cardlist-wrapper {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.card-wrapper {
+		width: 350px;
+		margin: 0 auto;
+		border: 1px solid blue;
+	}
+
+	.card-bx {
+		width: 100%;
+		height: 175px;
+	}
+} 
+
+@media all and (max-width: 1100px) {
+/*	.container {
+		width: 100%;
+		margin: 0 auto;
+		border: 1px solid yellow;
+	}
+*/
+	.cards-container {
+		width: 720px;
+		margin: 0 auto;
+		border: 1px solid red;
+	}
+
+	.cardlist-wrapper {
+		width: 100%;
+		margin: 0 auto;
+		border: 1px solid grey;
+	}
+
+	.card-wrapper {
+		width: 350px;
+		margin: 0 auto;
+		border: 1px solid blue;
+	}
+
+	.card-bx {
+		width: 100%;
+		height: 175px;
+	}
+} 
+
+@media all and (max-width: 1300px) {
+/*	.container {
+		width: 100%;
+		margin: 0 auto;
+		border: 1px solid yellow;
+	}*/
+
+	.cards-container {
+		width: 1100px;
+		margin: 0 auto;
+		border: 1px solid red;
+	}
+
+	.cardlist-wrapper {
+		width: 1100px;
+		margin: 0 auto;
+		border: 1px solid grey;
+	}
+
+	.card-wrapper {
+		width: 350px;
+		margin: 0 auto;
+		border: 1px solid blue;
+		margin-left: 8px;
+	}
+
+	.card-bx {
+		width: 100%;
+		height: 175px;
+	}
+} 

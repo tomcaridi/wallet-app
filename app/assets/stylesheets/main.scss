@@ -1,0 +1,57 @@
+.logo {
+	float: left;
+	color: #0E3C8E;
+	font-family: 'Tahoma';
+	font-size: 1.5em;
+	margin-top: 3px;
+	margin-left: 3px;
+
+	a:link, a:visited {
+	text-decoration: none;
+	}	
+}
+
+.nav {
+	width: 101%;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: -8px;
+
+	ul {
+	list-style: none;
+	float: right;
+	}
+
+	li {
+	font-size: 1em;
+	float: left;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-top: -6px;
+	}
+
+	a:link, a:visited {
+	text-decoration: none;
+	color: #0E3C8E;;
+	}
+}
+
+.addcard-text {
+	font-size: 1.5em;
+	position: relative;
+	top: 40%;
+	text-align: center;
+
+    a:link, a:visited {
+	text-decoration: none;
+	}
+}
+
+.edit-share {
+	float: right;
+	margin-left: 5px;
+
+	a:link, a:visited {
+	text-decoration: none;
+	}
+}
