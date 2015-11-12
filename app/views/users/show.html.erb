@@ -2,7 +2,7 @@
   <div class="cards-container">
     <% if session[:user_id] == @user.id %>
     <div class="edit-profile"><%= link_to 'Edit Profile', edit_user_path %></div>
-    <h3>My Cards</h3>
+    <h3><%= @user.firstname%>'s Cards</h3>
     <div class="cardlist-wrapper">
     <% @cards.each do |card| %>
       <div class="card-wrapper">
@@ -13,7 +13,7 @@
         </div>
           <div class="balance">Balance: $<%= card.balance %>0</div>
           <div class="edit-share"><%= link_to 'Edit', edit_card_path(card.id) %></div>
-         <div class="edit-share"><%= link_to 'Share', carduser_path %></div>
+         <div class="edit-share"><%= link_to 'Share', carduser_path(card.id) %></div>
       </div>
       <% end %>
       <div class="card-wrapper">
