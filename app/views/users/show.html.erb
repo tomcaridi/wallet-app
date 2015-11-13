@@ -13,7 +13,7 @@
         </div>
           <div class="balance">Balance: $<%= card.balance %>0</div>
           <div class="edit-share"><%= link_to 'Edit', edit_card_path(card.id) %></div>
-         <div class="edit-share"><%= link_to 'Share', new_carduser_path %></div>
+         <div class="edit-share"><%= link_to 'Share', share_path %></div>
       </div>
       <% end %>
       <div class="card-wrapper">
@@ -23,7 +23,6 @@
       </div>
     </div>
     <% else %>
-    <%= flash[:alert] = "You must be logged in." %>
-    <%= link_to 'Back', root_path %>
+    <div class="alert"><% flash[:alert] = "You must be logged in." %></div>
     <% end %>
 </body>

@@ -1,5 +1,5 @@
 <h3>Share this card with a friend or relative:</h3>
-<%= form_tag "carduser" do %>
-  <div class="f-field"><%=f.text_field :email %></div>
-  <%=f.submit%>
+<%= form_tag "share" do %>
+  <%=text_field_tag :email %>
+  <%=submit_tag :Submit %>
 <% end %>

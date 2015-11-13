@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
-  	  flash[:notice] = "User created"
+  	  flash[:notice] = "User created, please sign in."
       redirect_to sign_in_path
   	else 
   	  flash[:alert] = "There was an issue"

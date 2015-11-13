@@ -4,13 +4,13 @@
       <p><%= error %></p>
       <% end %>
   <% end %>
-	<div class="f-label"><%=f.label :card_number %></div>
-	<div class="f-field"><%=f.text_field :card_number %></div>
-  <div class="f-label"><%=f.label :exp_month %></div>
-  <div class="f-field"><%=f.select :exp_month, (1..12) %></div>
-  <div class="f-label"><%=f.label :exp_year %></div>
-  <div class="f-field"><%=f.select :exp_year, (2015..2025) %></div>
-  <div class="f-label"><%=f.label :balance %></div>
-  <div class="f-field"><%=f.text_field :balance %></div>
-  <div class="submit"><%=f.submit%></div>
+  <div class="form-content">
+  	<%=f.text_field :card_number, placeholder: "Card Number", class:"field" %>
+    <%=f.label :expiration_month, class:"label" %>
+    <%=f.select :exp_month, (1..12), placeholder: "Expiration Month", class:"field" %><br>
+    <%=f.label :Expiration_Year, class:"label" %>
+    <%=f.select :exp_year, (2015..2025), placeholder: "Expiration Year", class:"field" %>
+    <%=f.text_field :balance, placeholder: "Balance", class:"field"%>
+    <%=f.submit :Submit, class:"submit-btn"%>
+  </div>
 <% end %>

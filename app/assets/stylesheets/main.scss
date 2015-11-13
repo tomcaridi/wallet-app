@@ -115,10 +115,25 @@ h3 {
 	color: #0E3C8E;
 }
 
-.f-label, .f-field, .submit  {
-	text-align: center;
+.field {
+	width: 150px;
+	height: 20px;
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
 }
 
+.label {
+	font-size: 0.8em;
+}
+
+.submit-btn {
+	width: 75px;
+	height: 25px;
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
+}
 .cards-container {
 	margin: 0 auto;
 	display: block;
