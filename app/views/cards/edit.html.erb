@@ -1,5 +1,7 @@
 <div class="edit-bx">
-  <h1>Edit card</h1>
-  <%= render 'form' %>
-  <div class="delete"><%= link_to 'Delete Card', @card, method: :delete, data: {confirm: "Are you sure?"} %></div>
+  <div class="form-content">
+    <h1>Edit card</h1>
+    <%= render 'form' %>
+    <div class="delete"><%= link_to 'Delete Card', @card, method: :delete, data: {confirm: "Are you sure?"} %></div>
+  </div>
 </div>

@@ -71,6 +71,7 @@ span {
 
 .cover-bx {
 	width: 65%;
+	height: 60px;
 	background-color: #7F7F89;
 	margin: 0 auto;
 	top: 30%;
@@ -83,7 +84,6 @@ span {
 	font-family: 'Tahoma';
 	font-size: 3em;
 }
-
 
 .login-bx {
 	position: relative;
@@ -184,8 +184,18 @@ h3 {
 
     a:link, a:visited {
 	text-decoration: none;
-	color: #0E3C8E;
+	color: white;
 	}
+}
+
+.newcard-bx {	
+	position: relative;
+	top: 10%;
+	width: 350px;
+	height: 300px;
+	margin: 0 auto;
+	background-color: #F7F9FA;
+	border-radius: 10px;
 }
 
 .edit-profile {
@@ -207,7 +217,7 @@ h3 {
 
 .delete {
 	text-align: center;
-	font-size: 0.5em;
+	font-size: 0.75em;
 	padding-top: 10px;
 	a:link, a:visited {
 	text-decoration: none;
@@ -225,11 +235,16 @@ h3 {
 	border-radius: 10px;
 }
 
+.form-content {
+	display: block;
+	margin: 0 auto;
+}
+
 .delete-account a:link, a:visited {
 	text-decoration: none;
 }
 
-@media all and (max-width: 740px) {
+@media all and (max-width: 730px) {
 	.cards-container {
 		width: 360px;
 		margin: 0 auto;
