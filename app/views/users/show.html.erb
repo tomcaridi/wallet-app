@@ -13,7 +13,7 @@
         </div>
           <div class="balance">Balance: $<%= card.balance %>0</div>
           <div class="edit-share"><%= link_to 'Edit', edit_card_path(card.id) %></div>
-         <div class="edit-share"><%= link_to 'Share', share_path %></div>
+         <div class="edit-share"><%= link_to 'Share', share_path(card.id) %></div>
       </div>
       <% end %>
       <div class="card-wrapper">

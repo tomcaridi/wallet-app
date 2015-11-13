@@ -4,11 +4,13 @@
       <p><%= error %></p>
       <% end %>
   <% end %>
-	  <div class="f-field"><%=f.text_field :firstname, placeholder: "First Name" %></div>
-    <div class="f-field"><%=f.text_field :lastname, placeholder: "Last Name" %></div>
-    <div class="f-field"><%=f.email_field :email, placeholder: "Email" %></div>
-    <div class="f-field"><%=f.text_field :phone, placeholder: "Phone Number" %></div>
-    <div class="f-field"> <%=f.password_field :password, placeholder: "Password" %></div>
-    <div class="f-field"> <%=f.password_field :password_confirmation, placeholder: "Confirm Password" %></div>
-  	<div class="submit"><%=f.submit%></div>
+  <div class="form-content">
+	  <%=f.text_field :firstname, placeholder: "First Name", class:"field" %>
+    <%=f.text_field :lastname, placeholder: "Last Name", class:"field"%>
+    <%=f.email_field :email, placeholder: "Email", class:"field" %>
+    <%=f.text_field :phone, placeholder: "Phone Number", class:"field" %>
+    <%=f.password_field :password, placeholder: "Password", class:"field" %>
+    <%=f.password_field :password_confirmation, placeholder: "Confirm Password", class:"field" %>
+  	<%=f.submit%>
+  </div>
 <% end %>

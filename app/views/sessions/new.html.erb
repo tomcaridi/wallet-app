@@ -1,12 +1,12 @@
 <div class="cover">
-	<div class="login-bx">
+  <div class="login-bx">
+    <div class="form-content">
 	  <h1>Sign In</h1>
 	  <%= form_tag "sign_in" do %>
-	  <div class="f-label"><%= label_tag :email %></div>
-	  <div class="f-field"><%= text_field_tag :email %><div>
-	  <div class="f-label"><%= label_tag :password%><div>
-	  <div class="f-field"><%= password_field_tag :password %><div>
-	  <div class="submit"><%= submit_tag "Log In" %></div>
+	  <%= text_field_tag :email, "", placeholder: "Email", class:'field' %>
+	  <%= password_field_tag :password, "", placeholder: "Password", class:'field' %>
+	  <%= submit_tag "Submit" %>
 	  <% end %>
 	</div>
+  </div>
 </div>

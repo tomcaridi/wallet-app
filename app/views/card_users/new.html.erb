@@ -1,5 +1,9 @@
-<h3>Share this card with a friend or relative:</h3>
-<%= form_tag "share" do %>
-  <%=text_field_tag :email %>
-  <%=submit_tag :Submit %>
-<% end %>
+<div class="login-bx">
+  <div class="form-content">
+	<h3>Enter friend's email:</h3>
+	<%= form_tag "share" do %>
+	<%=text_field_tag :email %><br>
+	<%=submit_tag :Submit %>
+	<% end %>
+  </div>
+</div>
