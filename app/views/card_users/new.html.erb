@@ -1,9 +1,9 @@
 <div class="login-bx">
-  <div class="form-content">
+  <div class="sharecard-content">
 	<h3>Enter friend's email:</h3>
 	<%= form_tag "share" do %>
-	<%=text_field_tag :email %><br>
-	<%=submit_tag :Submit %>
+	<%=text_field_tag :email, "", placeholder: "Email", class:'field'  %><br>
+	<%=submit_tag "Submit", class:"submit" %>
 	<% end %>
   </div>
 </div>

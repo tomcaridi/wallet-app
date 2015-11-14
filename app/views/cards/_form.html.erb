@@ -6,11 +6,9 @@
   <% end %>
   <div class="form-content">
   	<%=f.text_field :card_number, placeholder: "Card Number", class:"field" %>
-    <%=f.label :expiration_month, class:"label" %>
-    <%=f.select :exp_month, (1..12), placeholder: "Expiration Month", class:"field" %><br>
-    <%=f.label :Expiration_Year, class:"label" %>
-    <%=f.select :exp_year, (2015..2025), placeholder: "Expiration Year", class:"field" %>
+    <%=f.label :expiration_date, class:"label" %><br>
+    <%=f.select :exp_month, (1..12), {}, {class:"dropdown"} %><%=f.select :exp_year, (2015..2025), {}, {class:"dropdown"} %>
     <%=f.text_field :balance, placeholder: "Balance", class:"field"%>
-    <%=f.submit :Submit, class:"submit-btn"%>
+    <%=f.submit class:"submit" %>
   </div>
 <% end %>

@@ -105,6 +105,14 @@ span {
 	border-radius: 10px;
 }
 
+.form-content {
+	position: relative;
+	display: block;
+	width: 150px;
+	top: 10%;
+	margin: 0 auto;
+}
+
 h1 {
 	color: #0E3C8E;
 	text-align: center;
@@ -126,15 +134,27 @@ h3 {
 
 .label {
 	font-size: 0.8em;
+	text-align: left;
 }
 
-.submit-btn {
-	width: 75px;
-	height: 25px;
+.submit {
+	width: 150px;
+	height: 20px;
 	border-radius: 5px;
 	display: block;
 	margin: 0 auto;
+	color: white;
+	border: none;
+	background-color: #179BD7;;
 }
+
+.dropdown {
+	width: 75px;
+	border-radius: 5px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
 .cards-container {
 	margin: 0 auto;
 	display: block;
@@ -222,6 +242,23 @@ h3 {
 	}
 }
 
+.editprofile-bx {
+	position: relative;
+	top: 10%;
+	width: 350px;
+	height: 350px;
+	margin: 0 auto;
+	background-color: #F7F9FA;
+	border-radius: 10px;
+}
+
+.editprofile-content {
+	position: relative;
+	display: block;
+	width: 177px;
+	top: 3%;
+	margin: 0 auto;
+}
 .edit-share {
 	float: right;
 	margin-left: 5px;
@@ -241,7 +278,7 @@ h3 {
 	}
 }
 
-.edit-bx {
+.editcard-bx {
 	position: relative;
 	top: 10%;
 	width: 350px;
@@ -251,12 +288,16 @@ h3 {
 	border-radius: 10px;
 }
 
-.form-content {
-	text-align: center;
-}
-
 .delete-account a:link, a:visited {
 	text-decoration: none;
+}
+
+.sharecard-content {
+	position: relative;
+	display: block;
+	width: 191px;
+	top: 20%;
+	margin: 0 auto;
 }
 
 @media all and (max-width: 730px) {
