@@ -14,11 +14,12 @@ class CardsController < ApplicationController
   	@card = Card.new(card_params)
   	if @card.save
       CardUser.create(user_id: session[:user_id], card_id: @card.id)
-  	  flash[:notice] = "Card added"
+  	  flash[:notice] = "Card successfully added"
+      redirect_to user_path(@user)
   	else 
-  	  flash[:alert] = "There was an issue"
+  	  flash[:alert] = "There was an issue adding the card"
   	end
-    redirect_to user_path(@user)
+    redirect_to new_card_path
   end
 
   def edit
@@ -37,6 +38,7 @@ class CardsController < ApplicationController
     @card.destroy
     @user = session[:user_id]
     redirect_to user_path(@user)
+    flash[:notice] = "Card successfully deleted"
   end
   
   private
