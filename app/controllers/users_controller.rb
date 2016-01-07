@@ -24,8 +24,11 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user.update(user_params)
+    if @user.update(user_params)
     redirect_to user_path(@user), notice: "Sucessfully updated profile."
+    else
+    redirect_to edit_user_path(@user), alert: "There was an issue"
+    end
   end
 
   def show

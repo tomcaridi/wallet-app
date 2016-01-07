@@ -18,8 +18,8 @@ class CardsController < ApplicationController
       redirect_to user_path(@user)
   	else 
   	  flash[:alert] = "There was an issue adding the card"
+      render :new
   	end
-    redirect_to new_card_path
   end
 
   def edit

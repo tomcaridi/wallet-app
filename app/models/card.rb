@@ -3,8 +3,9 @@ class Card < ActiveRecord::Base
   has_many :users, through: :card_users
 
   validates :card_number, length: { in: 13..16 }, presence: true, uniqueness: true
-  validates :exp_month, inclusion: { in: 1..12 }, numericality: { greater_than_or_equal_to: Time.now.month } 
-  validates :exp_year, numericality: { greater_than_or_equal_to: Time.now.year } 
+  validates :exp_month, inclusion: { in: 1..12 } 
+  validates :exp_year, numericality: { greater_than_or_equal_to: Time.now.year }
+  validate :card_expired?
 
   before_save :get_card_type
 
@@ -19,4 +20,15 @@ class Card < ActiveRecord::Base
   	  self.card_type = "Discover"
   	end
   end
+
+  def card_expired?
+    expiration = Time.utc(exp_year, exp_month)
+    Time.now.utc > expiration
+  end
+
+  # def month_days
+  #   mdays = [nil,31,28,31,30,31,30,31,31,30,31,30,31]
+  #   mdays[2] = 29 if Date.leap?(year)
+  #   mdays[exp_month]
+  # end
 end
